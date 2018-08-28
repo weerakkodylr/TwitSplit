@@ -1,0 +1,73 @@
+
+
+body{
+	color: @blue;
+	line-height: 25px;
+    letter-spacing: 2px;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 14px;
+    margin: 0px;
+    background: linear-gradient(to right, @yellow 0%,#efefef 0%,#f0c04f 25%,#f0c04f 75%,#ffffff 100%);
+
+    h1{
+    	font-size: 56px;
+    	font-weight: 800;
+    	color: @brown;
+    	margin-top:0px;
+    	padding-top:50px;
+    	text-align: center;
+
+    }
+
+    .main_container {
+    	margin: 0 auto;
+    	height: 100vh;
+    	width: 50vw;
+    	background: linear-gradient(to right, @yellow 0%, #ffffff 5%,  #ffffff 0%, #ffffff 95%, @yellow 100%);
+    }
+
+    .message_container {
+    	margin: 0 auto;
+    	height: 100vh;
+    	width: 50vw;
+    	background: linear-gradient(to right, @yellow 0%, #ffffff 5%,  #ffffff 0%, #ffffff 95%, @yellow 100%);
+    }
+
+    .text{
+    	width:80%;
+    	height: 10vh;
+    	display: block;
+    	margin: 0 auto;
+    	font-family: 'Roboto';
+    	border: 2px solid @yellow;
+    	border-radius:5px;
+    	outline: 0px;
+
+    	&:focus{
+    		border-color: @brown;
+    		
+    	}
+    }
+
+    .button{
+    	font-family: 'Roboto';
+    	padding:10px;
+    	width:8vw;
+    	background-color: @white;
+    	color: @yellow;
+    	font-weight: 600;
+    	border: 2px solid @yellow;
+    	float: right;
+	    margin-right: 10%;
+	    margin-top: 2%;
+	    font-size:16px;
+	    border-radius:5%;
+
+	    &:hover{
+	    	background-color: @brown;
+	    	border: 2px solid @brown;
+	    	color: @white;
+	    }
+    }
+}

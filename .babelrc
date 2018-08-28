@@ -1,0 +1,29 @@
+{
+  
+
+"env": {
+    "testing": {
+      "presets":[
+        ["env", { "modules": false }],
+        "stage-0",
+        "react",
+      ],
+      "plugins": [
+      	"react-html-attrs",
+        "transform-es2015-modules-commonjs",
+        
+      ]
+    },
+    "development": { 
+    	"presets": [
+		    "env",
+		    "stage-0"
+		  ],
+		  "plugins": [
+		    "transform-runtime"
+		  ]
+
+    }
+  }
+
+ }

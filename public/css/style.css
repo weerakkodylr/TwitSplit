@@ -1,0 +1,125 @@
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+.icon {
+  height: 36px;
+  width: 36px;
+  background-position: center !important;
+}
+body {
+  color: #4f72f0;
+  line-height: 25px;
+  letter-spacing: 2px;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 14px;
+  margin: 0px;
+  background: linear-gradient(to right, #f0c04f 0%, #efefef 0%, #f0c04f 25%, #f0c04f 75%, #ffffff 100%);
+}
+body h1 {
+  font-size: 56px;
+  font-weight: 800;
+  color: #f06f4f;
+  margin-top: 0px;
+  padding-top: 50px;
+  text-align: center;
+}
+body .main_container {
+  margin: 0 auto;
+  height: 100vh;
+  width: 50vw;
+  background: linear-gradient(to right, #f0c04f 0%, #ffffff 5%, #ffffff 0%, #ffffff 95%, #f0c04f 100%);
+}
+body .message_container {
+  margin: 0 auto;
+  height: 100vh;
+  width: 50vw;
+  background: linear-gradient(to right, #f0c04f 0%, #ffffff 5%, #ffffff 0%, #ffffff 95%, #f0c04f 100%);
+}
+body .text {
+  width: 80%;
+  height: 10vh;
+  display: block;
+  margin: 0 auto;
+  font-family: 'Roboto';
+  border: 2px solid #f0c04f;
+  border-radius: 5px;
+  outline: 0px;
+}
+body .text:focus {
+  border-color: #f06f4f;
+}
+body .button {
+  font-family: 'Roboto';
+  padding: 10px;
+  width: 8vw;
+  background-color: #ffffff;
+  color: #f0c04f;
+  font-weight: 600;
+  border: 2px solid #f0c04f;
+  float: right;
+  margin-right: 10%;
+  margin-top: 2%;
+  font-size: 16px;
+  border-radius: 5%;
+}
+body .button:hover {
+  background-color: #f06f4f;
+  border: 2px solid #f06f4f;
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=style.css.map*/
