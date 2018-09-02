@@ -1,21 +1,54 @@
+import { MessageSplitConfig } from '../config/helperConfig'
+import * as Helpers from '../common/helperFunctions'
 
+export const sendMessage = (messageText) => {
+	return ((dispatch)=>{
+		dispatch(messageSending())
 
-function loadingIntro(){
+		if(messageText.length <= MessageSplitConfig.messageCharcaterLimit)
+			dispatch(messageSent([messageText]))
+		else {
+			Helpers.splitMessage({messageText})
+			.then((result) => {
+				console.log("Result ," , result)
+				dispatch(messageSent(result))
+			})
+			.catch((err)=>{
+				dispatch(messageSendingError(err,messageText))
+			})
+		}
+	})
+}
+
+export const typingMessage = () => {
+	return ((dispatch)=>{
+		dispatch(messageTyping())
+	})
+
+}
+
+function messageSending(){
 	return {
-		type:"INTRO_LOADING"
+		type:"MESSAGE_SENDING"
 	}
 }
 
-function updateStoreWithIntro(data){
+function messageTyping(){
 	return {
-		type:"INTRO_LOADED",
-		payload: data
+		type:"MESSAGE_TYPING"
 	}
 }
 
-function errorLoadingInto(error){
+function messageSent(messageArray){
 	return {
-		type:"INTRO_LOAD_ERROR",
-		payload: error
+		type:"MESSAGE_SENT",
+		payload: messageArray
+	}
+}
+
+function messageSendingError(error, messageText){
+	return {
+		type:"MESSAGE_SENDING_ERROR",
+		payload: {error, messageText}
 	}
 }

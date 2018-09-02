@@ -8,7 +8,7 @@ body{
     font-weight: 300;
     font-size: 14px;
     margin: 0px;
-    background: linear-gradient(to right, @yellow 0%,#efefef 0%,#f0c04f 25%,#f0c04f 75%,#ffffff 100%);
+    background: linear-gradient(to right, @yellow 0%,@white 0%,@yellow 25%,@yellow 75%,@white 100%);
 
     h1{
     	font-size: 56px;
@@ -20,21 +20,31 @@ body{
 
     }
 
+    .clear {
+        clear: both;
+    }
+
     .main_container {
     	margin: 0 auto;
-    	height: 100vh;
+    	height: 100%;
+        min-height: 100vh;
     	width: 50vw;
-    	background: linear-gradient(to right, @yellow 0%, #ffffff 5%,  #ffffff 0%, #ffffff 95%, @yellow 100%);
+    	background: linear-gradient(to right, @yellow 0%, @white 5%,  @white 0%, @white 95%, @yellow 100%);
     }
 
-    .message_container {
-    	margin: 0 auto;
-    	height: 100vh;
-    	width: 50vw;
-    	background: linear-gradient(to right, @yellow 0%, #ffffff 5%,  #ffffff 0%, #ffffff 95%, @yellow 100%);
+    .error{
+        display: block;
+        clear: both;
+        margin: 0% 10%;
+        color: @brown;
+        font-size: 0.9em;
+
+        &.hide {
+            display: none;
+        }
     }
 
-    .text{
+    .msg_text{
     	width:80%;
     	height: 10vh;
     	display: block;
@@ -45,7 +55,7 @@ body{
     	outline: 0px;
 
     	&:focus{
-    		border-color: @brown;
+    		border-color: @blue;
     		
     	}
     }
@@ -56,18 +66,100 @@ body{
     	width:8vw;
     	background-color: @white;
     	color: @yellow;
-    	font-weight: 600;
     	border: 2px solid @yellow;
     	float: right;
 	    margin-right: 10%;
 	    margin-top: 2%;
-	    font-size:16px;
+	    font-size:1.05em;
 	    border-radius:5%;
+        outline:none;
 
 	    &:hover{
-	    	background-color: @brown;
-	    	border: 2px solid @brown;
+	    	background-color: @blue;
+	    	border: 2px solid @blue;
 	    	color: @white;
 	    }
     }
+
+    .disabled_button {
+            
+        font-family: 'Roboto';
+        padding:10px;
+        width:8vw;
+        background-color: @white;
+        color: @light-brown;
+        border: 2px solid @light-brown;
+        float: right;
+        margin-right: 10%;
+        margin-top: 2%;
+        font-size:1.05em;
+        border-radius:5%;
+        outline:none;
+
+        &:hover{
+        color: @light-brown;
+        border-color: @light-brown;
+        }
+    }
+
+    .message_display_container {
+        clear: both;
+        margin: 0 10%;
+        float: right;
+        width: 80%;
+
+        .message_display {
+            margin-top: 10px;
+            padding: 20px 10px;
+            background-color:@light-brown;
+            color: @brown;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+    }
+    
 }
+
+@media screen and (max-width: 992px) {
+    body{
+        background: linear-gradient(to right, @white 0%,@yellow 10%,@yellow 90%,@white 100%);
+
+        .main_container {
+        width: 80vw;
+        }
+
+        .main_container {
+            width: 80vw;
+        }
+
+        .disabled_button {
+            width: 10vw;
+        }
+
+        .button {
+            width: 10vw;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        background: linear-gradient(to right, @yellow 0%,@yellow 5%,@yellow 95%,@yellow 100%);
+        .main_container {
+            width: 90vw;
+        }
+
+        .main_container {
+            width: 90vw;
+        }
+
+        .disabled_button {
+            width: 15vw;
+        }
+
+        .button {
+            width: 15vw;
+        }
+    }
+}
+
