@@ -26,6 +26,7 @@ Other error message will get displayed if user enter nore than 50 characters wit
 1. npm install
 2. npm run build (This step might not require since I have added the built files as well)
 3. npm run start
+4. http://localhost:8080/
 
 ## Running UNIT Tests
 npm run test
