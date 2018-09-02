@@ -33,7 +33,6 @@ nodeApp.use('*', (req, res) => {
 	let urlParams = undefined
 	const currentRoute = routes.find( route => {
 		let matchedRoute = matchPath(req.originalUrl.split('?')[0], route)
-		console.log(matchedRoute)
 		if(matchedRoute)
 			urlParams = matchedRoute.params
 		return matchedRoute
@@ -65,12 +64,11 @@ nodeApp.use('*', (req, res) => {
 
 	    res.send(`
 	    	<!DOCTYPE html>
-			<html class="no-js ob-anim" class="cssanimations" data-language="en_SG" lang="en">
+			<html>
 			<head>
 			  <meta charset="UTF-8">
 			  <title>TwitSplit</title>
 			  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-			  <link rel="stylesheet" media="all" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
 
 			  <link rel="stylesheet" media="all" href="/css/style.css"/>
 			</head>

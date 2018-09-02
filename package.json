@@ -8,6 +8,7 @@
     "watch": "cross-env NODE_ENV=development webpack -w",
     "build": "cross-env NODE_ENV=development webpack -p",
     "start-dev": "node server",
+    "start": "node server",
     "test": "cross-env NODE_ENV=testing jest",
     "dev": "concurrently \"npm run build\" \"npm run watch\" \"npm run start-dev\""
   },

@@ -11,9 +11,9 @@ export default class App extends React.Component{
 
 	render(){
 		return(
-                    <Switch>
-                        {routes.map((route,i) => <Route key={i} {...route} /> )}
-                    </Switch>
+            <Switch>
+                {routes.map((route,i) => <Route key={i} {...route} /> )}
+            </Switch>
 		)
 	}
 }
